@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { mediaQuery } from '../../tools'
 
 export const CardMovie = styled.div`
   font-size: 0;
@@ -15,21 +16,40 @@ export const CardMovie = styled.div`
     display: inline-block;
   }
 
-  @media screen and (min-width: 375px) and (max-width: 767px) {
+  ${mediaQuery.mobile(`
     max-width: calc(50% - 4rem);
     margin: 2rem;
-  }
+  `)}
 
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  ${mediaQuery.tablet(`
     max-width: calc(33.33% - 4rem);
     margin: 2rem;
-  }
+  `)}
 
-  @media screen and (min-width: 1025px) {
+  ${mediaQuery.desktop(`
     max-width: calc(25% - 4rem);
-  }
+  `)}
 `
 
 export const CardMovieImage = styled.img`
   max-width: 100%;
+`
+
+export const CardMovieInfo = styled.div`
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #222;
+  }
+
+  ${mediaQuery.tabletDesktop(`
+    p {
+      font-size: 1.6rem;
+    }
+  `)}
 `

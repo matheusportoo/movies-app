@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { IMAGE_PATH } from '../../constants'
+import { getDateFormated } from '../../tools'
 import * as S from './style'
 
-const CardMovie = ({ posterPath, title, href }) => {
+const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage }) => {
   return (
     <S.CardMovie>
       <Link to={href}>
@@ -11,6 +12,10 @@ const CardMovie = ({ posterPath, title, href }) => {
           src={`${IMAGE_PATH('poster')}${posterPath}`}
           alt={title}
         />
+        <S.CardMovieInfo>
+          <p>{getDateFormated(releaseDate)}</p>
+          <p><strong>{voteAverage}</strong></p>
+        </S.CardMovieInfo>
       </Link>
     </S.CardMovie>
   )
