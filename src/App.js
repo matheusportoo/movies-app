@@ -7,7 +7,6 @@ const App = () => {
   return (
     <>
       <S.GlobalStyle />
-      <Routes.Links />
       <Routes.Pages />
     </>
   )

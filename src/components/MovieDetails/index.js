@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { getDateFormated } from '../../tools'
-import { IMAGES } from '../../constants'
+import { IMAGE_PATH } from '../../constants'
 
 const MovieDetails = ({
   title,
@@ -18,7 +18,7 @@ const MovieDetails = ({
       <p>{overview}</p>
       <p>{getDateFormated(releaseDate)}</p>
       <img
-        src={`${IMAGES.url}${IMAGES.presets.backdrop}${backdropPath}`}
+        src={`${IMAGE_PATH('backdrop')}${backdropPath}`}
         alt={title}
       />
       <p>{voteAverage}</p>
