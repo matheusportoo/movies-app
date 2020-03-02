@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { mediaQuery } from '../../tools'
 
 export const Title = styled.h1`
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -14,7 +15,7 @@ export const Title = styled.h1`
     font-weight: strong;
   }
 
-  @media screen and (min-width:1024px) {
+  ${mediaQuery.desktop(`
     background: var(--color-astronaut);
-  }
+  `)}
 `
