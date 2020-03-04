@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { IMAGE_PATH } from '../../constants'
 import { getDateFormated } from '../../tools'
+import AverageGrade from '../AverageGrade'
 import * as S from './style'
 
 const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage }) => {
@@ -13,8 +14,10 @@ const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage }) => {
           alt={title}
         />
         <S.CardMovieInfo>
-          <p>{getDateFormated(releaseDate)}</p>
-          <p><strong>{voteAverage}</strong></p>
+          <p>release date:<br />
+            <span>{getDateFormated(releaseDate)}</span>
+          </p>
+          <AverageGrade value={voteAverage} />
         </S.CardMovieInfo>
       </Link>
     </S.CardMovie>
