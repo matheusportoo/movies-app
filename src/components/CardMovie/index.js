@@ -14,7 +14,8 @@ const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage }) => {
           alt={title}
         />
         <S.CardMovieInfo>
-          <p>release date:<br />
+          <p>
+            <span>release date:</span><br />
             <span>{getDateFormated(releaseDate)}</span>
           </p>
           <AverageGrade value={voteAverage} />

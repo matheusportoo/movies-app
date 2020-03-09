@@ -48,21 +48,28 @@ export const CardMovieInfo = styled.div`
   align-items: center;
 
   p {
-    font-size: 1.2rem;
     margin-top: 0;
     margin-bottom: 0;
-    color: #888;
+    color: #f1f1f1;
 
     span {
-      font-size: 1.4rem;
+      font-size: 1rem;
+      background-color: #222;
+      padding: 4px;
       display: inline-block;
-      margin-top: 0.3rem;
-      color: #222;
+      line-height: 1;
+    }
+
+    span:last-child {
+      font-size: 1.2rem;
+      margin-top: 0.2rem;
+      color: #00e0ff;
+      font-weight: 800;
     }
   }
 
   ${mediaQuery.tabletDesktop(`
-    p span {
+    p span:last-child {
       font-size: 1.6rem;
     }
   `)}

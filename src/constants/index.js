@@ -8,7 +8,7 @@ export const API = {
     apiKey: process.env.REACT_APP_API_KEY_V4
   }
 }
-console.log(API)
+
 export const IMAGES = {
   url: 'https://image.tmdb.org/t/p/',
   presets: {
