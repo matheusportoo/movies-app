@@ -29,9 +29,4 @@ export const GlobalStyle = createGlobalStyle`
     --font-family-default: 'Lato', 'Arial', 'Sans-serif';
     --font-size-default: 10px;
   }
-
-  #root {
-    max-width: 1170px;
-    margin: 0 auto;
-  }
 `
