@@ -19,15 +19,15 @@ const AverageGrade = ({ value }) => {
               style={{ strokeDasharray: '100 0' }}
               fill='transparent'
               stroke='#d3d3d3'
-              stroke-width='0.75'
+              strokeWidth='0.75'
             />
             <circle
               cx="20" cy="20" r="14.75"
               style={{ strokeDasharray: percentualValue(value) }}
               fill='transparent'
               stroke='#00e0ff'
-              stroke-linecap='round'
-              stroke-width='2.5'
+              strokeLinecap='round'
+              strokeWidth='2.5'
             />
           </svg>
         </S.AverageGradePie>
