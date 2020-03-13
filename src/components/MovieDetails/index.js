@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import * as S from './style'
+
 import { getDateFormated } from '../../tools'
 import { IMAGE_PATH } from '../../constants'
+import AverageGrade from '../AverageGrade'
 
 const MovieDetails = ({
   title,
@@ -13,15 +16,30 @@ const MovieDetails = ({
 }) => {
   return (
     <>
-      <Link to='/movies' children='Voltar' />
-      <h2>{title}</h2>
-      <p>{overview}</p>
-      <p>{getDateFormated(releaseDate)}</p>
-      <img
-        src={`${IMAGE_PATH('backdrop')}${backdropPath}`}
-        alt={title}
-      />
-      <p>{voteAverage}</p>
+      <S.MovieDetailsHighlight>
+        <S.MovieDetailsHighlightWrapper>
+          <img
+            src={`${IMAGE_PATH('backdrop')}${backdropPath}`}
+            alt={title}
+          />
+        </S.MovieDetailsHighlightWrapper>
+      </S.MovieDetailsHighlight>
+
+      <S.MovieDetailsBackPage>
+        <Link to='/movies' children='« voltar' />
+      </S.MovieDetailsBackPage>
+
+      <S.MovieDetailsInfo>
+        <S.MovieDetailsTitle>{title}</S.MovieDetailsTitle>
+        <S.MovieDetailsRelease>
+          <p>
+            <span>release date:</span><br />
+            <span>{getDateFormated(releaseDate)}</span>
+          </p>
+          <AverageGrade value={voteAverage} />
+        </S.MovieDetailsRelease>
+        <S.MovieDetailsText>{overview}</S.MovieDetailsText>
+      </S.MovieDetailsInfo>
     </>
   )
 }

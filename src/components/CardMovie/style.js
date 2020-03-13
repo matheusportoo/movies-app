@@ -8,20 +8,32 @@ export const CardMovie = styled.div`
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 2rem 0.2rem;
   border-radius: 4px;
   overflow: hidden;
+  background-color: var(--color-white);
 
   a {
     text-decoration: none;
-    display: inline-block;
+    display: block;
   }
 `
 
-export const CardMovieImage = styled.img`
-  max-width: 100%;
-  opacity: 0.95;
-  transition: opacity 0.2s ease;
+export const CardMovieImage = styled.div`
+  background-color: rgba(0, 0, 0, 0.05);
+  position: relative;
+  width: 100%;
+  padding-top: 150.2%;
+  height: 0;
 
-  &:hover {
-    opacity: 1;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    opacity: 0.95;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 `
 

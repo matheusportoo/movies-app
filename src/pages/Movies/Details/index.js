@@ -4,6 +4,9 @@ import { useParams } from 'react-router-dom'
 import { ServiceMovies } from '../../../services/movies'
 import MovieDetails from '../../../components/MovieDetails'
 import MovieCredits from '../../../components/MovieCredits'
+import Container from '../../../components/Container'
+
+import * as S from './style'
 
 const PageMoviesDetails = () => {
   const { movieId } = useParams()
@@ -29,18 +32,20 @@ const PageMoviesDetails = () => {
   }, [creditsIsLoaded, detailsIsLoaded, movieId])
 
   return (
-    <>
-      { detailsIsLoaded ?
-        <MovieDetails
-          title={details.title}
-          overview={details.overview}
-          releaseDate={details.release_date}
-          backdropPath={details.backdrop_path}
-          voteAverage={details.vote_average} />
-      : null }
+    <Container>
+      <S.PageMovieDetails>
+        { detailsIsLoaded ?
+          <MovieDetails
+            title={details.title}
+            overview={details.overview}
+            releaseDate={details.release_date}
+            backdropPath={details.backdrop_path}
+            voteAverage={details.vote_average} />
+        : null }
 
-      { creditsIsLoaded ? <MovieCredits cast={credits.cast} /> : null}
-    </>
+        { creditsIsLoaded ? <MovieCredits cast={credits.cast} /> : null}
+      </S.PageMovieDetails>
+    </Container>
   )
 }
 

@@ -26,7 +26,6 @@ const AverageGrade = ({ value }) => {
               style={{ strokeDasharray: percentualValue(value) }}
               fill='transparent'
               stroke='#00e0ff'
-              strokeLinecap='round'
               strokeWidth='2.5'
             />
           </svg>
