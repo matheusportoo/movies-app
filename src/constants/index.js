@@ -13,7 +13,7 @@ export const IMAGES = {
   url: 'https://image.tmdb.org/t/p/',
   presets: {
     poster: `w500`,
-    backdrop: 'w780',
+    backdrop: 'w1280',
     profile: 'w185'
   }
 }

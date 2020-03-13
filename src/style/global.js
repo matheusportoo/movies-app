@@ -12,11 +12,11 @@ export const GlobalStyle = createGlobalStyle`
   html { font-size: 62.5%; }
 
   body {
-    margin: 0;
+    margin: 4rem 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-family-default);
-    background-color: var(--color-wild-sand);
+    background: linear-gradient(90deg, #3F5EFB 0%, #00e0ff 100%);
   }
 
   :root {

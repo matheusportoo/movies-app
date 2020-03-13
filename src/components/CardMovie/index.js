@@ -9,10 +9,13 @@ const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage }) => {
   return (
     <S.CardMovie>
       <Link to={href}>
-        <S.CardMovieImage
-          src={`${IMAGE_PATH('poster')}${posterPath}`}
-          alt={title}
-        />
+        <S.CardMovieImage>
+          <img
+            src={`${IMAGE_PATH('poster')}${posterPath}`}
+            alt={title}
+          />
+        </S.CardMovieImage>
+
         <S.CardMovieInfo>
           <p>
             <span>release date:</span><br />
