@@ -16,6 +16,24 @@ export const MovieCredits = styled.div`
   `)}
 `
 
+export const MovieCreditsTitle = styled.h3`
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #222;
+  display: inline-block;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  ${mediaQuery.tablet(`
+    font-size: 3.4rem;
+  `)}
+
+  ${mediaQuery.desktop(`
+    font-size: 5.6rem;
+  `)}
+`
+
 export const MovieCreditsItem = styled.div`
   position: relative;
 `
