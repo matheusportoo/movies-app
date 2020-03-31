@@ -1,11 +1,11 @@
 import axios from 'axios'
-import { API } from '../constants'
+import { API, FETCH_MOVIE_BY } from '../constants'
 
 const { v3 } = API
 
 export class ServiceMovies {
-  static getPopular() {
-    return axios.get(`${v3.url}/movie/popular`, {
+  static getMovies({ fetchBy = FETCH_MOVIE_BY.latest }) {
+    return axios.get(`${v3.url}/movie/${fetchBy}`, {
       params: { api_key: v3.apiKey }
     })
   }

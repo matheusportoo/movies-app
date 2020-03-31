@@ -1,12 +1,21 @@
 import Pages from '../pages'
 
-const { PageMovies, Page404, PageMoviesDetails } = Pages
+const {
+  PageHome,
+  PageMovies,
+  Page404,
+  PageMoviesDetails
+} = Pages
 
 const Routes = [{
+    path: '/',
+    component: PageHome,
+    label: 'Movies'
+  }, {
     path: '/movies',
     component: PageMovies,
     label: 'Movies'
-  },{
+  }, {
     path: '/movies/:movieId',
     component: PageMoviesDetails
   }, {

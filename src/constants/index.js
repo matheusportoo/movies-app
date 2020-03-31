@@ -26,3 +26,10 @@ export const IMAGE_PATH = (type) => {
   throw Error(`Pass only this arguments: ${Object.keys(IMAGES.presets).join(', ')}`)
 }
 
+export const FETCH_MOVIE_BY = {
+  latest: 'latest',
+  playing: 'now_playing',
+  popular: 'popular',
+  rated: 'top_rated',
+  coming: 'upcoming'
+}
