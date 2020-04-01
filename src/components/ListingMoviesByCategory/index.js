@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import ListingCardsMovie from '../ListingCardsMovie'
 import * as S from './style'
@@ -12,6 +13,12 @@ export const ListingMoviesByCategory = ({ title, movies, slug }) => {
       </S.ListingMoviesByCategoryMovies>
     </S.ListingMoviesByCategory>
   )
+}
+
+ListingMoviesByCategory.propTypes = {
+  title: PropTypes.string,
+  movies: PropTypes.array,
+  slug: PropTypes.oneOf(['popular','playing','top-rated','up-coming'])
 }
 
 export default ListingMoviesByCategory

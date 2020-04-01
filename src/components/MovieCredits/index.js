@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import * as S from './style'
 import { IMAGES } from '../../constants'
@@ -31,6 +32,10 @@ const MovieCredits = ({ cast }) => {
       </S.MovieCredits>
     </>
   )
+}
+
+MovieCredits.propTypes = {
+  cast: PropTypes.array
 }
 
 export default MovieCredits
