@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import * as S from './style'
@@ -42,6 +43,14 @@ const MovieDetails = ({
       </S.MovieDetailsInfo>
     </>
   )
+}
+
+MovieDetails.propTypes = {
+  title: PropTypes.string,
+  overview: PropTypes.string,
+  releaseDate: PropTypes.string,
+  backdropPath: PropTypes.string,
+  voteAverage: PropTypes.number
 }
 
 export default MovieDetails

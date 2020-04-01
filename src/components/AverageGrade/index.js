@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import * as S from './style'
 
 function percentualValue(value) {
@@ -33,6 +35,10 @@ const AverageGrade = ({ value }) => {
       </S.AverageGrade>
     </>
   )
+}
+
+AverageGrade.propTypes = {
+  value: PropTypes.number
 }
 
 export default AverageGrade

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import CardMovie from '../../components/CardMovie'
 import * as S from './style'
@@ -43,6 +44,25 @@ const ListingCardsMovies = ({ movies, modeView = 'grid', slug = ''}) => {
     modeView === 'slider' ?
       ListingCardsMoviesSlider({ movies, slug }) : ListingCardsMoviesGrid({ movies })
   )
+}
+
+ListingCardsMoviesItem.propTypes = {
+  movies: PropTypes.array
+}
+
+ListingCardsMoviesGrid.propTypes = {
+  movies: PropTypes.array
+}
+
+ListingCardsMoviesSlider.propTypes = {
+  movies: PropTypes.array,
+  slug: PropTypes.oneOf(['popular','playing','top-rated','up-coming'])
+}
+
+ListingCardsMovies.propTypes = {
+  movies: PropTypes.array,
+  modeView: PropTypes.oneOf(['grid', 'slider']),
+  slug: PropTypes.oneOf(['popular','playing','top-rated','up-coming'])
 }
 
 export default ListingCardsMovies

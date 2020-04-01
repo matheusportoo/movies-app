@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { IMAGE_PATH } from '../../constants'
 import { getDateFormated } from '../../tools'
@@ -26,6 +27,15 @@ const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage }) => {
       </Link>
     </S.CardMovie>
   )
+}
+
+CardMovie.propTypes = {
+  value: PropTypes.number,
+  posterPath: PropTypes.string,
+  title: PropTypes.string,
+  href: PropTypes.string,
+  releaseDate: PropTypes.string,
+  voteAverage: PropTypes.number
 }
 
 export default CardMovie
