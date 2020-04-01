@@ -6,8 +6,8 @@ import * as Routes from './routes'
 const App = () => {
   return (
     <>
-      <S.GlobalStyle />
       <Routes.Pages />
+      <S.GlobalStyle />
     </>
   )
 }
