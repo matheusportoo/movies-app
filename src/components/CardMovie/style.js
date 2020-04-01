@@ -9,6 +9,7 @@ export const CardMovie = styled.div`
   border-radius: 4px;
   overflow: hidden;
   background-color: var(--color-white);
+  width: 100%;
 
   a {
     text-decoration: none;
@@ -28,6 +29,7 @@ export const CardMovieImage = styled.div`
     top: 0;
     left: 0;
     max-width: 100%;
+    height: 100%;
     opacity: 0.95;
     transition: opacity 0.2s ease;
 
@@ -64,7 +66,13 @@ export const CardMovieInfo = styled.div`
     }
   }
 
-  ${mediaQuery.tabletDesktop(`
+  ${mediaQuery.desktop(`
+    p span:last-child {
+      font-size: 1.2rem;
+    }
+  `)}
+
+  ${mediaQuery.desktop(`
     p span:last-child {
       font-size: 1.6rem;
     }
