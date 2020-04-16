@@ -5,21 +5,17 @@ export const ListingMoviesByCategory = styled.div``;
 export const ListingMoviesByCategoryTitle = styled.h2`
   font-size: 2.6rem;
   font-weight: 800;
-  color: #00e0ff;
+  color: var(--color-highlight);
   display: inline-block;
   line-height: 1;
   margin-top: 0;
-  background-color: #222;
-  padding: 1rem;
 
   ${mediaQuery.tablet(`
     font-size: 4.4rem;
-    padding: 2rem;
   `)}
 
   ${mediaQuery.desktop(`
     font-size: 6.6rem;
-    padding: 2rem;
   `)}
 `
 

@@ -16,17 +16,26 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-family-default);
-    background: linear-gradient(90deg, #3F5EFB 0%, #00e0ff 100%);
+    background-color: var(--color-black);
   }
 
   :root {
-    --color-wild-sand: #f5f5f5;
-    --color-white: #fff;
-    --color-eminence: #633a82;
-    --color-turquoise: #40e0d0;
-    --color-astronaut: #27496d;
-
+    /** fonts */
     --font-family-default: 'Lato', 'Arial', 'Sans-serif';
     --font-size-default: 10px;
+  }
+
+  :root[data-theme="light"] {
+    --color-highlight: #00e0ff;
+    --color-dark: #fff;
+    --color-light: #111;
+    --color-black: #f5f5f5;
+  }
+
+  :root[data-theme="dark"] {
+    --color-highlight: #00e0ff;
+    --color-dark: #222;
+    --color-light: #f5f5f5;
+    --color-black: #111;
   }
 `

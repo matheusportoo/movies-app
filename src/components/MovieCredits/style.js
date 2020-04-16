@@ -19,7 +19,7 @@ export const MovieCredits = styled.div`
 export const MovieCreditsTitle = styled.h3`
   font-size: 2.6rem;
   font-weight: 800;
-  color: #222;
+  color: var(--color-highlight);
   display: inline-block;
   line-height: 1.2;
   margin-top: 0;
@@ -44,8 +44,8 @@ export const MovieCreditsName = styled.p`
   margin-bottom: 0;
 
   span {
-    color: #f1f1f1;
-    background-color: #222;
+    color: var(--color-light);
+    background-color: var(--color-dark);
     padding: 0.2rem 0;
   }
 `
@@ -57,8 +57,8 @@ export const MovieCreditsCharacter = styled.p`
   display: inline-block;
 
   span {
-    background-color: #222;
-    color: #00e0ff;
+    background-color: var(--color-dark);
+    color: var(--color-highlight);
     padding: 0.2rem 0;
     line-height: 1.5;
     font-weight: 600;

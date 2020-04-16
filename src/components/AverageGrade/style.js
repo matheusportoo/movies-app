@@ -14,7 +14,7 @@ export const AverageGradeText = styled.p`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #222 !important;
+  color: var(--color-light) !important;
 `
 
 export const AverageGradePie = styled.div`
