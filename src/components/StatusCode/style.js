@@ -18,7 +18,7 @@ export const StatusCodeWrapper = styled.div`
 export const Title = styled.h2`
   color: var(--color-highlight);
   font-size: 12.8rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 0;
   margin-top: 0;
 

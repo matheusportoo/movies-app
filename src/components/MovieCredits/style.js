@@ -18,7 +18,7 @@ export const MovieCredits = styled.div`
 
 export const MovieCreditsTitle = styled.h3`
   font-size: 2.6rem;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--color-highlight);
   display: inline-block;
   line-height: 1.2;

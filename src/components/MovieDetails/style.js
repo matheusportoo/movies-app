@@ -43,7 +43,7 @@ export const MovieDetailsInfo = styled.div`
 
 export const MovieDetailsTitle = styled.h2`
   font-size: 3.6rem;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--color-highlight);
   display: inline-block;
   line-height: 1.2;
@@ -90,7 +90,7 @@ export const MovieDetailsRelease = styled.div`
     span:last-child {
       font-size: 1.2rem;
       margin-top: 0.2rem;
-      font-weight: 800;
+      font-weight: 900;
     }
   }
 
