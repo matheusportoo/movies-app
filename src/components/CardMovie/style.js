@@ -71,7 +71,7 @@ export const CardMovieInfo = styled.div`
       font-size: 1.2rem;
       margin-top: 0.2rem;
       color: var(--color-highlight);
-      font-weight: 800;
+      font-weight: 900;
     }
   }
 

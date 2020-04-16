@@ -4,7 +4,7 @@ import { mediaQuery } from '../../tools'
 export const ListingMoviesByCategory = styled.div``;
 export const ListingMoviesByCategoryTitle = styled.h2`
   font-size: 2.6rem;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--color-highlight);
   display: inline-block;
   line-height: 1;
