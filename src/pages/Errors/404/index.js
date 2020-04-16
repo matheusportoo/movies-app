@@ -1,9 +1,17 @@
 import React from 'react'
-import Title from '../../../components/Title'
+
+import Container from '../../../components/Container'
+import StatusCode from '../../../components/StatusCode'
 
 const Page404 = () => {
   return (
-    <Title>Page <strong>404</strong></Title>
+    <Container>
+      <StatusCode
+        code='404'
+        title='Ops!'
+        message='this page not found'
+      />
+    </Container>
   )
 }
 

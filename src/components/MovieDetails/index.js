@@ -27,7 +27,7 @@ const MovieDetails = ({
       </S.MovieDetailsHighlight>
 
       <S.MovieDetailsBackPage>
-        <Link to='/movies' children='« voltar' />
+        <Link to='/movies' children='« back' />
       </S.MovieDetailsBackPage>
 
       <S.MovieDetailsInfo>
