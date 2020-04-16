@@ -5,10 +5,9 @@ export const CardMovie = styled.div`
   font-size: 0;
   display: inline-block;
   vertical-align: top;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 0 2rem 0.2rem;
-  border-radius: 4px;
   overflow: hidden;
-  background-color: var(--color-white);
+  border-radius: 5px;
+  background-color: var(--color-dark);
   width: 100%;
 
   a {
@@ -18,11 +17,29 @@ export const CardMovie = styled.div`
 `
 
 export const CardMovieImage = styled.div`
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--color-dark);
   position: relative;
   width: 100%;
   padding-top: 150.2%;
   height: 0;
+  overflow: hidden;
+
+  &:hover {
+    &::after { opacity: 0.2; }
+  }
+
+  &::after {
+    content: '';
+    background-color: var(--color-highlight);
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
 
   img {
     position: absolute;
@@ -30,12 +47,6 @@ export const CardMovieImage = styled.div`
     left: 0;
     max-width: 100%;
     height: 100%;
-    opacity: 0.95;
-    transition: opacity 0.2s ease;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 `
 
@@ -48,12 +59,10 @@ export const CardMovieInfo = styled.div`
   p {
     margin-top: 0;
     margin-bottom: 0;
-    color: #f1f1f1;
+    color: var(--color-light);
 
     span {
       font-size: 1rem;
-      background-color: #222;
-      padding: 4px;
       display: inline-block;
       line-height: 1;
     }
@@ -61,7 +70,7 @@ export const CardMovieInfo = styled.div`
     span:last-child {
       font-size: 1.2rem;
       margin-top: 0.2rem;
-      color: #00e0ff;
+      color: var(--color-highlight);
       font-weight: 800;
     }
   }

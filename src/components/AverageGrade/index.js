@@ -18,16 +18,16 @@ const AverageGrade = ({ value }) => {
           <svg width="100%" height="100%" viewBox="0 0 40 40">
             <circle
               cx="20" cy="20" r="14.75"
-              style={{ strokeDasharray: '100 0' }}
+              style={{ strokeDasharray: '100 0', opacity: 0.1 }}
               fill='transparent'
-              stroke='#d3d3d3'
+              stroke='var(--color-light)'
               strokeWidth='0.75'
             />
             <circle
               cx="20" cy="20" r="14.75"
               style={{ strokeDasharray: percentualValue(value) }}
               fill='transparent'
-              stroke='#00e0ff'
+              stroke='var(--color-highlight)'
               strokeWidth='2.5'
             />
           </svg>

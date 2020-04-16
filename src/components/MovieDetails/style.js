@@ -7,17 +7,17 @@ export const MovieDetailsBackPage = styled.div`
   left: 2rem;
 
   a {
-    background-color: #222;
+    background-color: var(--color-dark);
     display: inline-block;
     padding: 1.2rem;
-    color: #00e0ff;
+    color: var(--color-highlight);
     text-decoration: none;
     font-size: 1.2rem;
   }
 `
 
 export const MovieDetailsHighlight = styled.div`
-  background-color: rgba(0,0,0,0.05);
+  background-color: var(--color-dark);
   margin-left: -2rem;
   margin-right: -2rem;
 `
@@ -44,7 +44,7 @@ export const MovieDetailsInfo = styled.div`
 export const MovieDetailsTitle = styled.h2`
   font-size: 3.6rem;
   font-weight: 800;
-  color: #222;
+  color: var(--color-highlight);
   display: inline-block;
   line-height: 1.2;
   margin-top: 0;
@@ -62,6 +62,7 @@ export const MovieDetailsText = styled.p`
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 400;
+  color: var(--color-light);
 
   ${mediaQuery.desktop(`
     max-width: 75%;
@@ -76,11 +77,11 @@ export const MovieDetailsRelease = styled.div`
   p {
     margin-top: 0;
     margin-bottom: 0;
-    color: #f1f1f1;
+    color: var(--color-dark);
 
     span {
       font-size: 1rem;
-      background-color: #222;
+      background-color: var(--color-highlight);
       padding: 4px;
       display: inline-block;
       line-height: 1;
@@ -89,7 +90,6 @@ export const MovieDetailsRelease = styled.div`
     span:last-child {
       font-size: 1.2rem;
       margin-top: 0.2rem;
-      color: #00e0ff;
       font-weight: 800;
     }
   }

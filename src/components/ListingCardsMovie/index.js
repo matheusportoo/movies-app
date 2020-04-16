@@ -20,7 +20,7 @@ function ListingCardsMoviesItem({ movie }) {
 function ListingCardsMoviesSlider({ movies, slug }) {
   return (
     <S.ListingCardsMovieSlider>
-      { movies.length && movies.map((movie, index) => (
+      { movies.map((movie, index) => (
         <S.ListingCardsMovieSliderItem key={`movies-by-category-${slug}-${index}`}>
           <ListingCardsMoviesItem movie={movie} />
         </S.ListingCardsMovieSliderItem>
@@ -32,7 +32,7 @@ function ListingCardsMoviesSlider({ movies, slug }) {
 function ListingCardsMoviesGrid({ movies }) {
   return (
     <S.ListingCardsMovieGrid>
-      { movies.length && movies.map((movie, index) => (
+      { movies.map((movie, index) => (
         <ListingCardsMoviesItem movie={movie} key={`movies-${index}`} />
       )) }
     </S.ListingCardsMovieGrid>
