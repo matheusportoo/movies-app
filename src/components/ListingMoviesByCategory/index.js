@@ -18,7 +18,7 @@ export const ListingMoviesByCategory = ({ title, movies, slug }) => {
 ListingMoviesByCategory.propTypes = {
   title: PropTypes.string,
   movies: PropTypes.array,
-  slug: PropTypes.oneOf(['popular','playing','top-rated','up-coming'])
+  slug: PropTypes.string
 }
 
 export default ListingMoviesByCategory

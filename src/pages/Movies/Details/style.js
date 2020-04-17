@@ -8,3 +8,9 @@ export const PageMovieDetails = styled.article`
   padding-left: 2rem;
   padding-right: 2rem;
 `
+
+export const PageMovieDetailsWidget = styled.div`
+  &:not(:first-child) {
+    margin-top: 4rem;
+  }
+`

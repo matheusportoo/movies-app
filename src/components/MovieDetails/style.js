@@ -38,7 +38,6 @@ export const MovieDetailsHighlightWrapper = styled.div`
 
 export const MovieDetailsInfo = styled.div`
   margin-top: 4rem;
-  margin-bottom: 4rem;
 `
 
 export const MovieDetailsTitle = styled.h2`

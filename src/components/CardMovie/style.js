@@ -8,6 +8,7 @@ export const CardMovie = styled.div`
   overflow: hidden;
   border-radius: 5px;
   background-color: var(--color-dark);
+  border: 1px solid var(--color-black);
   width: 100%;
 
   a {
