@@ -56,13 +56,13 @@ ListingCardsMoviesGrid.propTypes = {
 
 ListingCardsMoviesSlider.propTypes = {
   movies: PropTypes.array,
-  slug: PropTypes.oneOf(['popular','playing','top-rated','up-coming'])
+  slug: PropTypes.string
 }
 
 ListingCardsMovies.propTypes = {
   movies: PropTypes.array,
   modeView: PropTypes.oneOf(['grid', 'slider']),
-  slug: PropTypes.oneOf(['popular','playing','top-rated','up-coming'])
+  slug: PropTypes.string
 }
 
 export default ListingCardsMovies

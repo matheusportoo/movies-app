@@ -27,5 +27,11 @@ export class ServiceMovies {
       params: { api_key: v3.apiKey }
     })
   }
+
+  static getRelatedMovies(movieId) {
+    return axios.get(`${v3.url}/movie/${movieId}/similar`, {
+      params: { api_key: v3.apiKey }
+    })
+  }
 }
 
