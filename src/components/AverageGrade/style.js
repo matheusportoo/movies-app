@@ -21,4 +21,12 @@ export const AverageGradePie = styled.div`
   transform: rotate(-90deg);
   max-width: 50px;
   position: relative;
+
+  @keyframes fillup {
+    from { stroke-dasharray: 0 100; }
+  }
+
+  svg circle:last-child {
+    animation: fillup 0.75s linear;
+  }
 `

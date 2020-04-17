@@ -2,10 +2,21 @@ import styled from 'styled-components'
 import { mediaQuery } from '../../tools'
 
 export const MovieCredits = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: block;
+  white-space: nowrap;
   font-size: 0;
-  margin: 4rem 0 2rem;
+  margin: 4rem -2rem 2rem;
+  padding: 0 2rem;
+  overflow-y: scroll;
+
+  ${mediaQuery.tabletDesktop(`
+    display: grid;
+    margin: 4rem 0 2rem;
+    flex: none;
+    overflow: auto;
+    white-space: normal;
+    padding: 0;
+  `)}
 
   ${mediaQuery.tablet(`
     grid-template-columns: repeat(4, 1fr);
@@ -36,6 +47,20 @@ export const MovieCreditsTitle = styled.h3`
 
 export const MovieCreditsItem = styled.div`
   position: relative;
+  width: calc(50% - 1rem);
+  display: inline-block;
+
+  &:not(:first-child) {
+    margin-left: 1rem;
+  }
+
+  ${mediaQuery.tabletDesktop(`
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+  `)}
 `
 
 export const MovieCreditsName = styled.p`
