@@ -4,18 +4,19 @@ import { mediaQuery } from '../../tools'
 export const ListingCardsMovieGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
 
   ${mediaQuery.mobile(`
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
   `)}
 
   ${mediaQuery.tablet(`
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(4, 1fr);
   `)}
 
   ${mediaQuery.desktop(`
-    grid-template-columns: repeat(5, 1fr)
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
   `)}
 `
 
@@ -42,7 +43,7 @@ export const ListingCardsMovieSliderItem = styled.div`
     flex:none;
 
     &:not(:first-child) {
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
   `)}
 
