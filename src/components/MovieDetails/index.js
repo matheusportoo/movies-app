@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
 import * as S from './style'
 
@@ -25,10 +24,6 @@ const MovieDetails = ({
           />
         </S.MovieDetailsHighlightWrapper>
       </S.MovieDetailsHighlight>
-
-      <S.MovieDetailsBackPage>
-        <Link to='/movies' children='« back' />
-      </S.MovieDetailsBackPage>
 
       <S.MovieDetailsInfo>
         <S.MovieDetailsTitle>{title}</S.MovieDetailsTitle>

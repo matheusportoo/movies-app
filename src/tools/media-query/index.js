@@ -1,7 +1,7 @@
 const BREAKPOINTS = {
   desktop: 1025,
   tablet: 768,
-  mobile: 375,
+  mobile: 320,
 }
 
 const mediaQuery = {
