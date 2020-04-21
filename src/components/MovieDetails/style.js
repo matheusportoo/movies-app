@@ -1,21 +1,6 @@
 import styled from 'styled-components'
 import { mediaQuery } from '../../tools'
 
-export const MovieDetailsBackPage = styled.div`
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-
-  a {
-    background-color: var(--color-dark);
-    display: inline-block;
-    padding: 1.2rem;
-    color: var(--color-highlight);
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-`
-
 export const MovieDetailsHighlight = styled.div`
   background-color: var(--color-dark);
   margin-left: -2rem;

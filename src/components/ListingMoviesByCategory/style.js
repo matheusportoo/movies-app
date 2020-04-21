@@ -9,13 +9,15 @@ export const ListingMoviesByCategoryTitle = styled.h2`
   display: inline-block;
   line-height: 1;
   margin-top: 0;
+  margin-bottom: 0;
 
   ${mediaQuery.tablet(`
     font-size: 4.4rem;
   `)}
 
   ${mediaQuery.desktop(`
-    font-size: 6.6rem;
+    font-size: 5.6rem;
+    margin-bottom: 4rem;
   `)}
 `
 

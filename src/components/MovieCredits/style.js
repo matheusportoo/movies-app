@@ -101,6 +101,8 @@ export const MovieCreditsPhoto = styled.div`
 export const MovieCreditsPhotoInfo = styled.div`
   position: absolute;
   left: 0.5rem;
+  right: 0.5rem;
   bottom: 0.5rem;
   padding: 0.5rem;
+  white-space: normal;
 `

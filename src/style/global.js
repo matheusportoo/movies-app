@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   html { font-size: 62.5%; }
 
   body {
-    margin: 4rem 0;
+    margin: 0 0 4rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-family-default);
@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root[data-theme="light"] {
-    --color-highlight: #00e0ff;
+    --color-highlight: #2D73FF;
     --color-dark: #fff;
     --color-light: #111;
     --color-black: #f5f5f5;
