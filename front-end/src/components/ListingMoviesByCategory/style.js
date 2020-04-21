@@ -1,7 +1,14 @@
 import styled from 'styled-components'
 import { mediaQuery } from '../../tools'
 
-export const ListingMoviesByCategory = styled.div``;
+export const ListingMoviesByCategory = styled.div``
+
+export const ListingMoviesByCategoryHead = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
 export const ListingMoviesByCategoryTitle = styled.h2`
   font-size: 2.6rem;
   font-weight: 900;
@@ -17,7 +24,6 @@ export const ListingMoviesByCategoryTitle = styled.h2`
 
   ${mediaQuery.desktop(`
     font-size: 5.6rem;
-    margin-bottom: 4rem;
   `)}
 `
 
@@ -28,5 +34,23 @@ export const ListingMoviesByCategoryMovies = styled.div`
     padding: 2rem;
     -webkit-overflow-scrolling: touch;
   `)}
+
+  ${mediaQuery.desktop(`
+    margin: 4rem -2rem 0;
+  `)}
+`
+
+export const ListingMoviesByCategorySeeMore = styled.span`
+  font-size: 0;
+
+  a {
+    color: var(--color-highlight);
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    ${mediaQuery.desktop(`
+      font-size: 1.6rem;
+    `)}
+  }
 `
 

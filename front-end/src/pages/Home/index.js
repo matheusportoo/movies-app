@@ -10,8 +10,8 @@ const PageHome = () => {
   const slugs = ['popular', 'playing', 'rated', 'coming']
   const [moviesPopular, setMoviesPopular] = useState({ title: 'Popular', items: [], slug: 'popular' })
   const [moviesPlaying, setMoviesPlaying] = useState({ title: 'Playing', items: [], slug: 'playing' })
-  const [moviesTopRated, setMoviesTopRated] = useState({ title: 'Top Rated', items: [], slug: 'top-rated' })
-  const [moviesUpComing, setMoviesUpComing] = useState({ title: 'Up Coming', items: [], slug: 'up-coming' })
+  const [moviesTopRated, setMoviesTopRated] = useState({ title: 'Top Rated', items: [], slug: 'rated' })
+  const [moviesUpComing, setMoviesUpComing] = useState({ title: 'Up Coming', items: [], slug: 'coming' })
 
   useEffect(() => {
     if (
@@ -44,7 +44,7 @@ const PageHome = () => {
           .map(({ title, items, slug }, index) => (
 
             <S.PageHomeListingCategories key={`movies-by-category-${index}`}>
-              <ListingMoviesByCategory title={title} movies={items} slug={slug} />
+              <ListingMoviesByCategory title={title} movies={items} slug={slug} seeMore={`/movies?modality=${slug}`}/>
             </S.PageHomeListingCategories>
 
           )) }
