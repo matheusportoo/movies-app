@@ -43,26 +43,3 @@ export const Logo = styled.h1`
     font-size: 2rem;
   `)}
 `
-
-export const GoBack = styled.span`
-  font-size: 0;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
-  a {
-    display: inline-block;
-    color: var(--color-highlight);
-  }
-
-  svg {
-    width: 24px;
-    height: 24px;
-
-    ${mediaQuery.desktop(`
-      width: 28px;
-      height: 28px;
-    `)}
-  }
-`
