@@ -36,7 +36,7 @@ export const ListingMoviesByCategoryMovies = styled.div`
   `)}
 
   ${mediaQuery.desktop(`
-    margin: 4rem -2rem 0;
+    margin: 4rem 0 0;
   `)}
 `
 

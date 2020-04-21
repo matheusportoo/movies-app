@@ -43,3 +43,26 @@ export const Logo = styled.h1`
     font-size: 2rem;
   `)}
 `
+
+export const GoBack = styled.button`
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  color: var(--color-highlight);
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  outline: none;
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    ${mediaQuery.desktop(`
+      width: 28px;
+      height: 28px;
+    `)}
+  }
+`
