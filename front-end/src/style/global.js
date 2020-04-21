@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   html { font-size: 62.5%; }
 
   body {
-    margin: 0 0 4rem;
+    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-family-default);
