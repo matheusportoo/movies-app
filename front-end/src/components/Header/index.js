@@ -9,7 +9,7 @@ import { Link, useHistory } from 'react-router-dom'
 const isHome = () => window.location.pathname === '/'
 
 const GoBack = ({ handleGoBack }) => (
-  <S.GoBack onClick={handleGoBack}>
+  <S.GoBack onClick={handleGoBack} type='button' role='button'>
     <svg><use xlinkHref={`#back`} /></svg>
   </S.GoBack>
 )
