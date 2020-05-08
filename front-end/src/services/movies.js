@@ -33,5 +33,11 @@ export class ServiceMovies {
       params: { api_key: v3.apiKey }
     })
   }
+
+  static searchBy(query) {
+    return axios.get(`${v3.url}/search/movie`, {
+      params: { query, api_key: v3.apiKey }
+    })
+  }
 }
 

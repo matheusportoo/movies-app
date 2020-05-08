@@ -7,16 +7,22 @@ const {
   PageMoviesDetails
 } = Pages
 
+export const route = {
+  home: '/',
+  movies: '/movies',
+  movie: '/movies/:movieId'
+}
+
 const Routes = [{
-    path: '/',
+    path: route.home,
     component: PageHome,
     label: 'Movies'
   }, {
-    path: '/movies',
+    path: route.movies,
     component: PageMovies,
     label: 'Movies'
   }, {
-    path: '/movies/:movieId',
+    path: route.movie,
     component: PageMoviesDetails
   }, {
     path: '*',
