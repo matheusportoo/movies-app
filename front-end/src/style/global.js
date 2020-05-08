@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
 
   *,
   *::before,
@@ -23,6 +23,9 @@ export const GlobalStyle = createGlobalStyle`
     /** fonts */
     --font-family-default: 'Lato', 'Arial', 'Sans-serif';
     --font-size-default: 10px;
+
+    /** layers */
+    --z-index-search-bar: 1;
   }
 
   :root[data-theme="light"] {

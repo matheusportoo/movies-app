@@ -37,7 +37,6 @@ export const CardMovieImage = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }

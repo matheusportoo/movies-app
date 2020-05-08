@@ -14,13 +14,20 @@ function useQuery() {
 const PageMovies = () => {
   const query = useQuery()
   const [movies, setMovies] = useState([])
+  const [term] = useState(query.get('query') || '')
 
   useEffect(() => {
     if (!movies.length) {
+      if (term) {
+        ServiceMovies.searchBy(term)
+          .then(response => setMovies(response.data.results))
+        return;
+      }
+
       ServiceMovies.getMovies({ fetchBy: FETCH_MOVIE_BY[query.get('modality') || 'popular'] })
         .then(response => setMovies(response.data.results))
     }
-  })
+  },[movies.length, query, term])
 
   return (
     <Container>

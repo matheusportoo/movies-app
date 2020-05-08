@@ -17,9 +17,13 @@ export const BottomBar = styled.div`
   padding: 1.5rem 0;
   height: 5rem;
 
-  div {
+  > div {
     position: relative;
     min-height: 100%;
+
+    ${mediaQuery.mobileTablet(`
+      margin: 0;
+    `)}
   }
 
   ${mediaQuery.desktop(`
@@ -51,33 +55,43 @@ export const Logo = styled.h1`
   `)}
 `
 
-export const GoBack = styled.button`
+export const ActionsButtons = styled.button`
   position: absolute;
-  left: 0;
   top: 50%;
   transform: translate3d(0, -50%, 0);
-  display: inline-block;
+  display: flex;
   color: var(--color-highlight);
   background-color: transparent;
   padding: 0;
   border: 0;
   outline: none;
-  width: 24px;
-  height: 24px;
+  width: 60px;
+  height: 50px;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 
   ${mediaQuery.desktop(`
-    width: 28px;
-    height: 28px;
+    width: 56px;
+    height: 56px;
   `)}
 
   svg {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
 
     ${mediaQuery.desktop(`
       width: 28px;
       height: 28px;
     `)}
   }
+`
+
+export const GoBackButton = styled(ActionsButtons)`
+  left: 0;
+`
+
+export const SearchButton = styled(ActionsButtons)`
+  right: 0;
+  background-color: ${({ isOpenForm }) => isOpenForm ? 'var(--color-dark)' : ''};
 `
