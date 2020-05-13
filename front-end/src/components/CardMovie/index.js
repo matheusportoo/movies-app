@@ -6,27 +6,36 @@ import { getDateFormated } from '../../tools'
 import AverageGrade from '../AverageGrade'
 import * as S from './style'
 
-const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage }) => {
+function Placeholder() {
   return (
     <S.CardMovie>
-      <NavLink to={href}>
-        <S.CardMovieImage>
-          <img
-            src={`${IMAGE_PATH('poster')}${posterPath}`}
-            alt={title}
-          />
-        </S.CardMovieImage>
-
-        <S.CardMovieInfo>
-          <p>
-            <span>release date:</span><br />
-            <span>{getDateFormated(releaseDate)}</span>
-          </p>
-          <AverageGrade value={voteAverage} />
-        </S.CardMovieInfo>
-      </NavLink>
+      <S.CardMovieImage />
+      <S.CardMovieInfo />
     </S.CardMovie>
   )
+}
+
+const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage, isFetching }) => {
+  return isFetching
+    ? (<Placeholder />)
+    : (<S.CardMovie>
+        <NavLink to={href}>
+          <S.CardMovieImage>
+            {posterPath ? <img
+              src={`${IMAGE_PATH('poster')}${posterPath}`}
+              alt={title}
+            /> : title }
+          </S.CardMovieImage>
+
+          <S.CardMovieInfo>
+            <p>
+              <span>release date:</span><br />
+              <span>{getDateFormated(releaseDate)}</span>
+            </p>
+            <AverageGrade value={voteAverage} />
+          </S.CardMovieInfo>
+        </NavLink>
+      </S.CardMovie>)
 }
 
 CardMovie.propTypes = {
@@ -35,7 +44,8 @@ CardMovie.propTypes = {
   title: PropTypes.string,
   href: PropTypes.string,
   releaseDate: PropTypes.string,
-  voteAverage: PropTypes.number
+  voteAverage: PropTypes.number,
+  isFetching: PropTypes.bool
 }
 
 export default CardMovie
