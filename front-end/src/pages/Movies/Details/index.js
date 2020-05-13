@@ -12,10 +12,10 @@ import * as S from './style'
 const PageMoviesDetails = () => {
   const { movieId } = useParams()
   const [details, setDetails] = useState({})
-  const [detailsIsLoaded, setDetailsIsLoaded] = useState(false)
   const [credits, setCredits] = useState({})
   const [creditsIsLoaded, setCreditsIsLoaded] = useState(false)
   const [relatedMovies, setRelatedMovies] = useState([])
+  const [isFetchRelatedMovies, setIsFetchRelatedMovies] = useState(true)
 
   useEffect(() => {
     window.scrollTo({ top: 0 })
@@ -23,7 +23,6 @@ const PageMoviesDetails = () => {
     ServiceMovies.getDetails(movieId)
       .then(response => {
         setDetails(response.data)
-        setDetailsIsLoaded(true)
       })
 
     ServiceMovies.getCredits(movieId)
@@ -35,20 +34,21 @@ const PageMoviesDetails = () => {
     ServiceMovies.getRelatedMovies(movieId)
       .then(response => {
         setRelatedMovies(response.data.results)
+        setIsFetchRelatedMovies(false)
       })
   }, [movieId])
 
   return (
     <Container>
       <S.PageMovieDetails>
-        { detailsIsLoaded ?
+
           <MovieDetails
             title={details.title}
             overview={details.overview}
             releaseDate={details.release_date}
             backdropPath={details.backdrop_path}
             voteAverage={details.vote_average} />
-        : null }
+
 
         { creditsIsLoaded ?
           <S.PageMovieDetailsWidget><MovieCredits cast={credits.cast} /></S.PageMovieDetailsWidget>
@@ -56,7 +56,12 @@ const PageMoviesDetails = () => {
         }
 
         <S.PageMovieDetailsWidget>
-          <ListingMoviesByCategory title={'Related Movies'} movies={relatedMovies} slug={'related-movies'} />
+          <ListingMoviesByCategory
+            title={'Related Movies'}
+            movies={relatedMovies}
+            slug={'related-movies'}
+            isFetching={isFetchRelatedMovies}
+          />
         </S.PageMovieDetailsWidget>
       </S.PageMovieDetails>
     </Container>

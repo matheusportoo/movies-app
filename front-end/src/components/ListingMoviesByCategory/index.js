@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import ListingCardsMovie from '../ListingCardsMovie'
 import * as S from './style'
 
-export const ListingMoviesByCategory = ({ title, movies, slug, seeMore }) => {
+export const ListingMoviesByCategory = ({ title, movies, slug, seeMore, isFetching }) => {
   return (
     <S.ListingMoviesByCategory>
       <S.ListingMoviesByCategoryHead>
@@ -17,7 +17,7 @@ export const ListingMoviesByCategory = ({ title, movies, slug, seeMore }) => {
         : null }
       </S.ListingMoviesByCategoryHead>
       <S.ListingMoviesByCategoryMovies>
-        <ListingCardsMovie movies={movies} modeView='slider' slug={slug} />
+        <ListingCardsMovie movies={movies} modeView='slider' slug={slug} isFetching={isFetching} />
       </S.ListingMoviesByCategoryMovies>
     </S.ListingMoviesByCategory>
   )
@@ -27,7 +27,8 @@ ListingMoviesByCategory.propTypes = {
   title: PropTypes.string,
   movies: PropTypes.array,
   slug: PropTypes.string,
-  seeMore: PropTypes.string
+  seeMore: PropTypes.string,
+  isFetching: PropTypes.bool
 }
 
 export default ListingMoviesByCategory

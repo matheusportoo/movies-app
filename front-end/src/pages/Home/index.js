@@ -8,6 +8,7 @@ import * as S from './style'
 
 const PageHome = () => {
   const slugs = ['popular', 'playing', 'rated', 'coming']
+  const [isFetching, setIsFetching] = useState(true)
   const [moviesPopular, setMoviesPopular] = useState({ title: 'Popular', items: [], slug: 'popular' })
   const [moviesPlaying, setMoviesPlaying] = useState({ title: 'Playing', items: [], slug: 'playing' })
   const [moviesTopRated, setMoviesTopRated] = useState({ title: 'Top Rated', items: [], slug: 'rated' })
@@ -34,6 +35,7 @@ const PageHome = () => {
           setMoviesPlaying({ ...moviesPlaying, ...{ items: playing.data.results } })
           setMoviesTopRated({ ...moviesTopRated, ...{ items: rated.data.results } })
           setMoviesUpComing({ ...moviesUpComing, ...{ items: coming.data.results } })
+          setIsFetching(false)
         })
     }
   })
@@ -42,11 +44,15 @@ const PageHome = () => {
     <Container>
       { [moviesPlaying, moviesTopRated, moviesUpComing, moviesPopular]
           .map(({ title, items, slug }, index) => (
-
             <S.PageHomeListingCategories key={`movies-by-category-${index}`}>
-              <ListingMoviesByCategory title={title} movies={items} slug={slug} seeMore={`/movies?modality=${slug}`}/>
+              <ListingMoviesByCategory
+                title={title}
+                movies={items}
+                slug={slug}
+                seeMore={`/movies?modality=${slug}`}
+                isFetching={isFetching}
+              />
             </S.PageHomeListingCategories>
-
           )) }
     </Container>
   )

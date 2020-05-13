@@ -55,6 +55,7 @@ export const CardMovieInfo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 7.0rem;
 
   p {
     margin-top: 0;
