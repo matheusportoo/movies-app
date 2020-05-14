@@ -17,23 +17,24 @@ const Header = () => {
   const isHome = () => window.location.pathname === route.home
 
   const GoBack = () => (
-    <S.GoBackButton onClick={handleGoBack} type='button' role='button'>
+    <S.GoBackButton onClick={handleGoBack}
+      type='button'
+      aria-label='Back page'
+    >
       <svg><use xlinkHref='#back' /></svg>
     </S.GoBackButton>
   )
 
   const SearchButton = () => (
-
     <S.SearchButton
       title='Search'
       type='button'
-      role='button'
+      aria-label='Search movies'
       onClick={() => toggleSearchBar()}
       isOpenForm={isOpenForm}
     >
       <svg><use xlinkHref={isOpenForm ? '#close-icon': '#search'} /></svg>
     </S.SearchButton>
-
   )
 
   const toggleSearchBar = () => {
