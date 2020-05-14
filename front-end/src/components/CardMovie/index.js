@@ -21,10 +21,11 @@ const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage, isFetchi
     : (<S.CardMovie>
         <NavLink to={href}>
           <S.CardMovieImage>
-            {posterPath ? <img
-              src={`${IMAGE_PATH('poster')}${posterPath}`}
-              alt={title}
-            /> : title }
+            { posterPath && <picture>
+                <source srcset={`${IMAGE_PATH('poster2x')}${posterPath}`} media='(min-width: 1170px)' />
+                <img srcset={`${IMAGE_PATH('poster')}${posterPath}`} alt={title} />
+            </picture>
+            }
           </S.CardMovieImage>
 
           <S.CardMovieInfo>

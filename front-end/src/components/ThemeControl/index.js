@@ -17,7 +17,8 @@ const changeThemeColor = (theme) => {
 
 const Button = ({ theme }) => (
   <S.Button
-    type="button"
+    type='button'
+    aria-label={`change theme mode for ${theme}`}
     onClick={ () => changeThemeColor(theme) }
   >
     <svg><use xlinkHref={`#${icons[theme]}`} /></svg>

@@ -28,7 +28,10 @@ const SearchBar = ({ afterHandleSubmit }) => {
           name='query'
           value={term}
         />
-        <S.SearchBarButton>
+        <S.SearchBarButton
+          type='submit'
+          aria-label='Submit search movies'
+        >
           <svg><use xlinkHref='#search' /></svg>
         </S.SearchBarButton>
       </S.SearchBarForm>
