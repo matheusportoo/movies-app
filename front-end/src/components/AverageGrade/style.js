@@ -6,7 +6,7 @@ export const AverageGrade = styled.div`
 `
 
 export const AverageGradeText = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 900;
   margin-top: 0;
   margin-bottom: 0;
