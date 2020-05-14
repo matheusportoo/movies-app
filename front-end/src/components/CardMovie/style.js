@@ -21,7 +21,7 @@ export const CardMovieImage = styled.div`
   background-color: var(--color-dark);
   position: relative;
   width: 100%;
-  padding-top: 150.2%;
+  padding-top: 150%;
   height: 0;
   overflow: hidden;
 
