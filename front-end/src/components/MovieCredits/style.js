@@ -64,7 +64,7 @@ export const MovieCreditsItem = styled.div`
 `
 
 export const MovieCreditsName = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 0;
   margin-bottom: 0;
 

@@ -64,7 +64,7 @@ export const MovieDetailsRelease = styled.div`
     color: var(--color-dark);
 
     span {
-      font-size: 1rem;
+      font-size: 1.2rem;
       background-color: var(--color-highlight);
       padding: 4px;
       display: inline-block;
@@ -72,7 +72,7 @@ export const MovieDetailsRelease = styled.div`
     }
 
     span:last-child {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin-top: 0.2rem;
       font-weight: 900;
     }

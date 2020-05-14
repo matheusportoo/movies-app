@@ -63,13 +63,13 @@ export const CardMovieInfo = styled.div`
     color: var(--color-light);
 
     span {
-      font-size: 1rem;
+      font-size: 1.2rem;
       display: inline-block;
       line-height: 1;
     }
 
     span:last-child {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 0.2rem;
       color: var(--color-highlight);
       font-weight: 900;
@@ -78,7 +78,7 @@ export const CardMovieInfo = styled.div`
 
   ${mediaQuery.desktop(`
     p span:last-child {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   `)}
 
