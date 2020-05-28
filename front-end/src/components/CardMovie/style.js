@@ -14,6 +14,7 @@ export const CardMovie = styled.div`
   a {
     text-decoration: none;
     display: block;
+    pointer-events: ${(props) => props.isFetching ? "none" : "inherit"};
   }
 `
 
@@ -56,6 +57,7 @@ export const CardMovieInfo = styled.div`
   justify-content: space-between;
   align-items: center;
   min-height: 7.0rem;
+  opacity: ${(props) => props.isFetching ? 0 : 1};
 
   p {
     margin-top: 0;
