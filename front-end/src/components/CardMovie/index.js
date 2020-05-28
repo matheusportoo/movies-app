@@ -13,7 +13,11 @@ const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage, isFetchi
         <S.CardMovieImage>
           { posterPath && <picture>
               <source srcSet={`${IMAGE_PATH('poster2x')}${posterPath}`} media='(min-width: 1170px)' />
-              <img srcSet={`${IMAGE_PATH('poster')}${posterPath}`} alt={title} />
+              <img
+                srcSet={`${IMAGE_PATH('poster')}${posterPath}`}
+                alt={title}
+                loading="lazy"
+              />
           </picture>
           }
         </S.CardMovieImage>
