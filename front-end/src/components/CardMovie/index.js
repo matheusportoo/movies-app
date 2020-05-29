@@ -11,14 +11,17 @@ const CardMovie = ({ posterPath, title, href, releaseDate, voteAverage, isFetchi
     <S.CardMovie isFetching={isFetching}>
       <NavLink to={href}>
         <S.CardMovieImage>
-          { posterPath && <picture>
-              <source srcSet={`${IMAGE_PATH('poster2x')}${posterPath}`} media='(min-width: 1170px)' />
+          { posterPath &&
               <img
-                srcSet={`${IMAGE_PATH('poster')}${posterPath}`}
+                srcSet={`
+                  ${IMAGE_PATH('poster')}${posterPath} 1169w
+                  ${IMAGE_PATH('poster2x')}${posterPath} 1170w,
+                `}
+                sizes="(max-width: 1169px) 1169px, 1170px"
+                src={`${IMAGE_PATH('poster')}${posterPath}`}
                 alt={title}
                 loading="lazy"
               />
-          </picture>
           }
         </S.CardMovieImage>
 
