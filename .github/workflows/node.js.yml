@@ -25,11 +25,23 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: pwd
-    - run: ls
-    - run: yarn install
-    - run: yarn run storybook-build
+
+    - name: Install dependencies...
+      run: yarn install
+
+    - name: Generate storybook... 🚀
+      run: yarn run build-storybook
+
+    - name: Deploy storybook... 🚀
+      uses: JamesIves/github-pages-deploy-action@3.6.2
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: master # The branch the action should deploy to.
+        FOLDER: ./front-end/storybook-static # The folder that the build-storybook script generates files.
+        CLEAN: true # Automatically remove deleted files from the deploy branch
+        TARGET_FOLDER: docs # The folder that we serve our Storybook files from
