@@ -1,0 +1,41 @@
+{
+  "files": {
+    "0.b6e074ad.iframe.bundle.js": "./0.b6e074ad.iframe.bundle.js",
+    "0.b6e074ad.iframe.bundle.js.map": "./0.b6e074ad.iframe.bundle.js.map",
+    "1.c5cb37d9.iframe.bundle.js": "./1.c5cb37d9.iframe.bundle.js",
+    "2.c8f6dc2b.iframe.bundle.js": "./2.c8f6dc2b.iframe.bundle.js",
+    "main.css": "./static/css/main.0ec1658c.chunk.css",
+    "main.js": "./main.193a80e0.iframe.bundle.js",
+    "main.css.map": "./static/css/main.0ec1658c.chunk.css.map",
+    "runtime~main.js": "./runtime~main.7ee447dc.iframe.bundle.js",
+    "vendors~main.js": "./vendors~main.9a0bc239.iframe.bundle.js",
+    "vendors~main.js.map": "./vendors~main.9a0bc239.iframe.bundle.js.map",
+    "6.98a925e3.iframe.bundle.js": "./6.98a925e3.iframe.bundle.js",
+    "6.98a925e3.iframe.bundle.js.map": "./6.98a925e3.iframe.bundle.js.map",
+    "7.f0b4b36c.iframe.bundle.js": "./7.f0b4b36c.iframe.bundle.js",
+    "8.d6b26a40.iframe.bundle.js": "./8.d6b26a40.iframe.bundle.js",
+    "9.c0a47b6b.iframe.bundle.js": "./9.c0a47b6b.iframe.bundle.js",
+    "9.c0a47b6b.iframe.bundle.js.map": "./9.c0a47b6b.iframe.bundle.js.map",
+    "0.b6e074ad.iframe.bundle.js.LICENSE.txt": "./0.b6e074ad.iframe.bundle.js.LICENSE.txt",
+    "6.98a925e3.iframe.bundle.js.LICENSE.txt": "./6.98a925e3.iframe.bundle.js.LICENSE.txt",
+    "9.c0a47b6b.iframe.bundle.js.LICENSE.txt": "./9.c0a47b6b.iframe.bundle.js.LICENSE.txt",
+    "iframe.html": "./iframe.html",
+    "precache-manifest.e573257e8cfb6d5e7124212d230e6c17.js": "./precache-manifest.e573257e8cfb6d5e7124212d230e6c17.js",
+    "service-worker.js": "./service-worker.js",
+    "static/media/code-brackets.svg": "./static/media/code-brackets.d43eb968.svg",
+    "static/media/colors.svg": "./static/media/colors.8104e6f5.svg",
+    "static/media/comments.svg": "./static/media/comments.3f9a1398.svg",
+    "static/media/direction.svg": "./static/media/direction.d3dc567b.svg",
+    "static/media/flow.svg": "./static/media/flow.e3812c4f.svg",
+    "static/media/plugin.svg": "./static/media/plugin.5ba97e9b.svg",
+    "static/media/repo.svg": "./static/media/repo.3452b916.svg",
+    "static/media/stackalt.svg": "./static/media/stackalt.66f4b748.svg",
+    "vendors~main.9a0bc239.iframe.bundle.js.LICENSE.txt": "./vendors~main.9a0bc239.iframe.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.7ee447dc.iframe.bundle.js",
+    "vendors~main.9a0bc239.iframe.bundle.js",
+    "static/css/main.0ec1658c.chunk.css",
+    "main.193a80e0.iframe.bundle.js"
+  ]
+}
