@@ -25,6 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: Change directory to front-end
+        run: |
+          cd front-end
+
       - name: Setup Node with yarn caching
         uses: actions/setup-node@v2
         with:
