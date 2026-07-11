@@ -9,7 +9,7 @@ import * as S from './style'
 
 const MovieDetailsPage = () => {
   const { movieId = '' } = useParams<{ movieId: string }>()
-  const { details, credits, relatedMovies, isLoadingCredits, isLoadingRelated } =
+  const { details, credits, relatedMovies, videoKey, isLoadingCredits, isLoadingRelated } =
     useMovieDetails(movieId)
 
   return (
@@ -21,6 +21,7 @@ const MovieDetailsPage = () => {
           releaseDate={details.release_date}
           backdropPath={details.backdrop_path}
           voteAverage={details.vote_average}
+          videoKey={videoKey}
         />
 
         {!isLoadingCredits ? (

@@ -9,9 +9,17 @@ interface MovieDetailsProps {
   releaseDate?: string
   backdropPath?: string | null
   voteAverage?: number
+  videoKey?: string | null
 }
 
-const MovieDetails = ({ title, overview, releaseDate, backdropPath, voteAverage }: MovieDetailsProps) => {
+const MovieDetails = ({
+  title,
+  overview,
+  releaseDate,
+  backdropPath,
+  voteAverage,
+  videoKey,
+}: MovieDetailsProps) => {
   return (
     <>
       <S.MovieDetailsHighlight>
@@ -33,6 +41,16 @@ const MovieDetails = ({ title, overview, releaseDate, backdropPath, voteAverage 
           <AverageGrade value={voteAverage} />
         </S.MovieDetailsRelease>
         <S.MovieDetailsText>{overview}</S.MovieDetailsText>
+        {videoKey && (
+          <S.MovieDetailsVideo>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoKey}`}
+              title={`${title} trailer`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </S.MovieDetailsVideo>
+        )}
       </S.MovieDetailsInfo>
     </>
   )

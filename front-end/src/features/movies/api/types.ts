@@ -25,6 +25,17 @@ export interface MovieCredits {
   cast: CastMember[]
 }
 
+export interface MovieVideo {
+  key: string
+  site: string
+  type: string
+  name: string
+}
+
+export interface MovieVideosResponse {
+  results: MovieVideo[]
+}
+
 export type FetchMovieBySlug = 'latest' | 'playing' | 'popular' | 'rated' | 'coming'
 
 export interface MovieCategory {
