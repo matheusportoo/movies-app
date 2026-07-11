@@ -25,7 +25,7 @@ const MoviesListPage = () => {
       {hasMore && !isFetching && (
         <S.LoadMoreWrapper>
           <S.LoadMoreButton onClick={loadMore} disabled={isLoadingMore}>
-            {isLoadingMore ? 'Carregando...' : 'Carregar mais'}
+            {isLoadingMore ? 'Loading...' : 'Load more'}
           </S.LoadMoreButton>
         </S.LoadMoreWrapper>
       )}

@@ -24,21 +24,21 @@ export const useMovieDetails = (movieId: string) => {
     setIsLoadingVideos(true)
 
     ServiceMovies.getDetails(movieId).then((response) => {
-      setDetails(response.data)
+      setDetails(response)
     })
 
     ServiceMovies.getCredits(movieId).then((response) => {
-      setCredits(response.data)
+      setCredits(response)
       setIsLoadingCredits(false)
     })
 
     ServiceMovies.getRelatedMovies(movieId).then((response) => {
-      setRelatedMovies(response.data.results)
+      setRelatedMovies(response.results)
       setIsLoadingRelated(false)
     })
 
     ServiceMovies.getVideos(movieId).then((response) => {
-      setVideoKey(selectTrailer(response.data.results))
+      setVideoKey(selectTrailer(response.results))
       setIsLoadingVideos(false)
     })
   }, [movieId])

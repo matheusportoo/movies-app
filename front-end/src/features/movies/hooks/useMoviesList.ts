@@ -29,8 +29,8 @@ export const useMoviesList = ({ query, modality }: UseMoviesListParams) => {
     fetchMovies.then((response) => {
       if (requestId !== requestIdRef.current) return
 
-      setMovies(response.data.results)
-      setTotalPages(response.data.total_pages)
+      setMovies(response.results)
+      setTotalPages(response.total_pages)
       setIsFetching(false)
     })
   }, [query, modality])
@@ -49,9 +49,9 @@ export const useMoviesList = ({ query, modality }: UseMoviesListParams) => {
     fetchMovies.then((response) => {
       if (requestId !== requestIdRef.current) return
 
-      setMovies((prev) => [...prev, ...response.data.results])
-      setPage(response.data.page)
-      setTotalPages(response.data.total_pages)
+      setMovies((prev) => [...prev, ...response.results])
+      setPage(response.page)
+      setTotalPages(response.total_pages)
       setIsLoadingMore(false)
     })
   }, [query, modality, page, totalPages, isLoadingMore])
