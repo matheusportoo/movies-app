@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 import { API, FETCH_MOVIE_BY } from './constants'
-import type { Movie, MovieCredits, MovieListResponse } from './types'
+import type { Movie, MovieCredits, MovieListResponse, MovieVideosResponse } from './types'
 
 const { v3 } = API
 
@@ -32,6 +32,12 @@ export class ServiceMovies {
 
   static getRelatedMovies(movieId: string) {
     return axios.get<MovieListResponse>(`${v3.url}/movie/${movieId}/similar`, {
+      params: { api_key: v3.apiKey },
+    })
+  }
+
+  static getVideos(movieId: string) {
+    return axios.get<MovieVideosResponse>(`${v3.url}/movie/${movieId}/videos`, {
       params: { api_key: v3.apiKey },
     })
   }

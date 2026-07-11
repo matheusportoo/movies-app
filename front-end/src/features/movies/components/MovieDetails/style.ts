@@ -53,6 +53,25 @@ export const MovieDetailsText = styled.p`
   `)}
 `
 
+export const MovieDetailsVideo = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.2%;
+  margin-top: 4rem;
+  background-color: var(--color-dark);
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+`
+
 export const MovieDetailsRelease = styled.div`
   display: flex;
   justify-content: space-between;
