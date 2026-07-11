@@ -6,9 +6,9 @@ import type { Movie, MovieCredits, MovieListResponse } from './types'
 const { v3 } = API
 
 export class ServiceMovies {
-  static getMovies({ fetchBy = FETCH_MOVIE_BY.latest }: { fetchBy?: string }) {
+  static getMovies({ fetchBy = FETCH_MOVIE_BY.latest, page = 1 }: { fetchBy?: string; page?: number }) {
     return axios.get<MovieListResponse>(`${v3.url}/movie/${fetchBy}`, {
-      params: { api_key: v3.apiKey },
+      params: { api_key: v3.apiKey, page },
     })
   }
 
@@ -36,9 +36,9 @@ export class ServiceMovies {
     })
   }
 
-  static searchBy(query: string) {
+  static searchBy(query: string, page = 1) {
     return axios.get<MovieListResponse>(`${v3.url}/search/movie`, {
-      params: { query, api_key: v3.apiKey },
+      params: { query, api_key: v3.apiKey, page },
     })
   }
 }
