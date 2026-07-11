@@ -1,0 +1,94 @@
+import styled from 'styled-components'
+import { mediaQuery } from '@/shared/utils/media-query'
+
+export const CardMovie = styled.div<{ $isFetching?: boolean }>`
+  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-black);
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    display: block;
+    pointer-events: ${({ $isFetching }) => ($isFetching ? 'none' : 'inherit')};
+  }
+`
+
+export const CardMovieImage = styled.div`
+  background-color: var(--color-dark);
+  position: relative;
+  width: 100%;
+  padding-top: 150%;
+  height: 0;
+  overflow: hidden;
+
+  &:hover {
+    &::after {
+      opacity: 0.2;
+    }
+  }
+
+  &::after {
+    content: '';
+    background-color: var(--color-highlight);
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+`
+
+export const CardMovieInfo = styled.div<{ $isFetching?: boolean }>`
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 7rem;
+  opacity: ${({ $isFetching }) => ($isFetching ? 0 : 1)};
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--color-light);
+
+    span {
+      font-size: 1.2rem;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    span:last-child {
+      font-size: 1.3rem;
+      margin-top: 0.2rem;
+      color: var(--color-highlight);
+      font-weight: 900;
+    }
+  }
+
+  ${mediaQuery.desktop(`
+    p span:last-child {
+      font-size: 1.4rem;
+    }
+  `)}
+
+  ${mediaQuery.desktop(`
+    p span:last-child {
+      font-size: 1.6rem;
+    }
+  `)}
+`
