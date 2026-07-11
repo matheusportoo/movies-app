@@ -30,10 +30,10 @@ export const useHomeCategories = () => {
 
     Promise.all(promises).then(([popular, playing, rated, coming]) => {
       setCategories([
-        { ...createCategory('Playing', 'playing'), items: playing.data.results },
-        { ...createCategory('Top Rated', 'rated'), items: rated.data.results },
-        { ...createCategory('Up Coming', 'coming'), items: coming.data.results },
-        { ...createCategory('Popular', 'popular'), items: popular.data.results },
+        { ...createCategory('Playing', 'playing'), items: playing.results },
+        { ...createCategory('Top Rated', 'rated'), items: rated.results },
+        { ...createCategory('Up Coming', 'coming'), items: coming.results },
+        { ...createCategory('Popular', 'popular'), items: popular.results },
       ])
       setIsFetching(false)
     })
