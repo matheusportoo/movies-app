@@ -50,6 +50,11 @@ export const MovieCreditsItem = styled.div`
   width: calc(50% - 1rem);
   display: inline-block;
 
+  a {
+    text-decoration: none;
+    display: block;
+  }
+
   &:not(:first-child) {
     margin-left: 1rem;
   }
@@ -95,6 +100,24 @@ export const MovieCreditsPhoto = styled.div`
 
   img {
     width: 100%;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.2;
+    }
+  }
+
+  &::after {
+    content: '';
+    background-color: var(--color-highlight);
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
   }
 `
 
