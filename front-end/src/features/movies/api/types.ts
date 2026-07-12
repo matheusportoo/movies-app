@@ -16,9 +16,34 @@ export interface MovieListResponse {
 }
 
 export interface CastMember {
+  id: number
   name: string
   character: string
   profile_path: string | null
+}
+
+export interface Actor {
+  id: number
+  name: string
+  biography: string
+  birthday: string | null
+  place_of_birth: string | null
+  profile_path: string | null
+}
+
+export interface ActorMovieCredit {
+  id: number
+  title: string
+  overview: string
+  poster_path: string | null
+  backdrop_path: string | null
+  release_date: string
+  vote_average: number
+  character: string
+}
+
+export interface ActorMovieCreditsResponse {
+  cast: ActorMovieCredit[]
 }
 
 export interface MovieCredits {

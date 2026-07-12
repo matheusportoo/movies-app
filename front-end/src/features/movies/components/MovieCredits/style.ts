@@ -50,6 +50,11 @@ export const MovieCreditsItem = styled.div`
   width: calc(50% - 1rem);
   display: inline-block;
 
+  a {
+    text-decoration: none;
+    display: block;
+  }
+
   &:not(:first-child) {
     margin-left: 1rem;
   }
